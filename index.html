@@ -85,6 +85,78 @@ kbd{font:600 11px Oxanium,sans-serif;display:inline-block;min-width:20px;text-al
 body.ingame #side{z-index:6;top:284px;width:250px}
 body.ingame #side .sw p.lead{display:none}
 .sw{padding:12px 14px 13px}
+.xbtn{display:flex;align-items:center;justify-content:center;width:40px;color:#e4f6ff;text-decoration:none;padding:9px 0}
+.xbtn:hover{border-color:var(--sky)}
+body:not(.ingame) #swGame,body:not(.ingame) #swProf,body.ingame #swPlay{display:none}
+.gp-loop{display:flex;gap:4px;margin-top:9px}
+.gp-loop div{flex:1;text-align:center;padding:7px 2px 6px;background:rgba(127,232,255,.05);border:1px solid rgba(127,232,255,.14);position:relative}
+.gp-loop div+div::before{content:"";position:absolute;left:-6px;top:50%;width:6px;height:1px;background:var(--sky)}
+.gp-loop b{display:block;font:800 12px Oxanium,sans-serif;color:#f2fbff}
+.gp-loop span{font:500 9.5px Oxanium,sans-serif;color:#8fb9cf}
+.gp-mon{display:grid;grid-template-columns:auto 1fr auto;gap:2px 9px;align-items:center;padding:6px 8px;background:rgba(0,0,0,.22);margin-top:4px;border-left:3px solid var(--mc)}
+.gp-mon i{grid-row:span 2;width:10px;height:10px;transform:rotate(45deg);background:var(--mc);box-shadow:0 0 8px var(--mc)}
+.gp-mon b{font:700 12.5px Oxanium,sans-serif;color:#f2fbff}
+.gp-mon em{font:600 10.5px Oxanium,sans-serif;font-style:normal;color:#8fb9cf;text-align:right}
+.gp-mon span{grid-column:2 / 4;font:500 10.5px Oxanium,sans-serif;color:#8fb9cf}
+.gp-sk{display:grid;grid-template-columns:1fr;gap:4px}
+.gp-sk div{padding:6px 6px 5px;background:rgba(0,0,0,.22);border:1px solid rgba(127,232,255,.12)}
+.gp-sk kbd{font:800 10px Oxanium,sans-serif;color:#2a0614;background:var(--gold);padding:0 5px;margin-right:4px}
+.gp-sk b{font:700 11.5px Oxanium,sans-serif;color:#f2fbff}
+.gp-sk span{display:block;font:500 10.5px Oxanium,sans-serif;color:#8fb9cf;margin-top:2px;line-height:1.3}
+.gp-ranks{display:flex;gap:3px}
+.gp-ranks div{flex:1;text-align:center;padding:5px 0 4px;background:rgba(0,0,0,.22);border-bottom:2px solid var(--rc)}
+.gp-ranks b{display:block;font:800 14px Oxanium,sans-serif;color:var(--rc)}
+.gp-ranks span{font:500 9px Oxanium,sans-serif;color:#7fa9bf}
+.gp-forge{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:5px 8px;background:rgba(0,0,0,.22);margin-top:3px;font:600 11px Oxanium,sans-serif}
+.gp-forge span{color:#8fb9cf;font-weight:500;font-size:10px;text-align:right}
+.gp-zones{display:flex;flex-wrap:wrap;gap:4px}
+.gp-zones span{font:600 10.5px Oxanium,sans-serif;color:#cfeaf7;padding:3px 7px;border:1px solid rgba(127,232,255,.2);background:rgba(127,232,255,.05)}
+
+#side{max-height:calc(100vh - 92px);overflow-y:auto;scrollbar-width:none}
+#side::-webkit-scrollbar{display:none}
+body.ingame #side{max-height:calc(100vh - 300px)}
+.pf-head{display:flex;gap:11px;align-items:center;margin-top:9px}
+.pf-av{position:relative;width:58px;height:58px;flex:none}
+.pf-av img,.pf-av .ph{width:58px;height:58px;display:block;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);image-rendering:pixelated;background:#0a2a44}
+.pf-av .ph{display:flex;align-items:center;justify-content:center;font:800 22px Oxanium,sans-serif;color:#6fa3c0}
+.pf-av b{position:absolute;right:-5px;bottom:-4px;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font:800 12px Oxanium,sans-serif;color:#fff;background:linear-gradient(180deg,#ff8db0,#c8346a);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);text-shadow:0 1px 2px #000}
+.pf-id{min-width:0;flex:1}
+.pf-id .nm{font:800 16px Oxanium,sans-serif;color:#f2fbff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-id .sub{font:500 11.5px Oxanium,sans-serif;color:#8fb9cf;margin-top:1px}
+.pf-chip{display:inline-flex;align-items:center;gap:5px;margin-top:4px;padding:2px 7px;font:600 10.5px Oxanium,sans-serif;color:#cfeaf7;background:rgba(127,232,255,.08);border:1px solid rgba(127,232,255,.22)}
+.pf-chip i{width:6px;height:6px;border-radius:50%;background:#5ef0b0;box-shadow:0 0 6px #5ef0b0}
+.pf-chip.off i{background:#ff7a9a;box-shadow:0 0 6px #ff7a9a}
+.pf-bar{margin-top:9px}
+.pf-bar .l{display:flex;justify-content:space-between;font:600 10.5px Oxanium,sans-serif;color:#8fb9cf;margin-bottom:3px}
+.pf-bar .l b{color:#eaf6ff;font-weight:700}
+.pf-bar .t{height:6px;background:rgba(0,0,0,.4);border:1px solid rgba(127,232,255,.16);position:relative;overflow:hidden}
+.pf-bar .t i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#ffb36b,#ffe39a)}
+.pf-bar.rp .t i{background:linear-gradient(90deg,#c8346a,#ff8db0)}
+.pf-bar.hp .t i{background:linear-gradient(90deg,#2fbf7a,#8af0b8)}
+.pf-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:10px}
+.pf-stats div{padding:6px 2px 5px;text-align:center;background:rgba(127,232,255,.05);border:1px solid rgba(127,232,255,.14)}
+.pf-stats b{display:block;font:800 15px Oxanium,sans-serif;color:#f2fbff}
+.pf-stats span{font:600 9.5px Oxanium,sans-serif;color:#7fa9bf;letter-spacing:.04em}
+.pf-sec{font:700 10.5px Oxanium,sans-serif;color:var(--gold);letter-spacing:.06em;margin:11px 0 5px;display:flex;justify-content:space-between}
+.pf-sec em{font-style:normal;color:#7fa9bf;font-weight:600;letter-spacing:0}
+.pf-eq{display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(0,0,0,.22);border-left:3px solid var(--rc);margin-top:4px}
+.pf-eq svg{flex:none;width:22px;height:22px}
+.pf-eq .n{font:700 12.5px Oxanium,sans-serif;color:var(--rc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pf-eq .s{font:500 10.5px Oxanium,sans-serif;color:#8fb9cf}
+.pf-eq div{min-width:0;flex:1}
+.pf-eq u{text-decoration:none;font:600 9.5px Oxanium,sans-serif;color:#7fa9bf}
+.pf-mats{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.pf-mats div{text-align:center;padding:5px 0 4px;background:rgba(0,0,0,.22);border:1px solid rgba(127,232,255,.1)}
+.pf-mats i{display:block;width:12px;height:12px;margin:0 auto 3px;transform:rotate(45deg);background:var(--mc);box-shadow:0 0 8px var(--mc)}
+.pf-mats b{font:800 12px Oxanium,sans-serif;color:#eaf6ff}
+.pf-mats span{display:block;font:500 8.5px Oxanium,sans-serif;color:#7fa9bf;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 2px}
+.pf-vault{display:flex;flex-wrap:wrap;gap:3px}
+.pf-vault i{width:14px;height:14px;background:var(--rc);opacity:.85;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.pf-vault i.sl::after{content:"";position:absolute;inset:4px;background:#fff;border-radius:50%}
+.pf-quest{padding:6px 8px;background:rgba(0,0,0,.22);font:600 11.5px Oxanium,sans-serif;color:#eaf6ff}
+.pf-quest span{display:block;font:500 10.5px Oxanium,sans-serif;color:#8fb9cf;margin-top:2px}
+body.ingame .pf-mats span{display:none}
+
 .sw h6{font:700 12px Oxanium,sans-serif;color:var(--gold);letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center}
 .sw h6 button{font:600 11px Oxanium,sans-serif;color:#9cc7dc}
 .sw p.lead{font-size:13px;color:#a9cfe2;margin-top:4px;line-height:1.4}
@@ -229,6 +301,7 @@ body.touch .log{display:none}
 
 <div class="t-top" id="ttop">
   <button class="chip ia" id="wBtnTop">Connect wallet</button>
+  <a class="chip xbtn" href="https://x.com/playreranker" target="_blank" rel="noopener" aria-label="Re:Ranker on X"><svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.8-6.3L6.4 22H3.3l7.3-8.3L1 2h6.3l4.4 5.8zm-1.1 18h1.7L6.3 3.9H4.5z"/></svg></a>
 </div>
 
 <section id="title">
@@ -258,8 +331,12 @@ body.touch .log{display:none}
   <div class="pane sw" id="swToken">
     <h6>TOKEN CONTRACT</h6>
     <p class="lead">$RANK powers Re:Ranker on Ethereum.</p>
-    <dl class="kv"><dt>Ticker</dt><dd>$RANK</dd><dt>Network</dt><dd>Ethereum</dd><dt>Contract</dt><dd id="tkAddr">Posted at launch</dd><dt>Supply</dt><dd id="tkSup">-</dd></dl>
+    <dl class="kv"><dt>Ticker</dt><dd>$RANK</dd><dt>Network</dt><dd>Ethereum</dd><dt>Contract</dt><dd id="tkAddr">Posted at launch</dd></dl>
     <div class="acts"><button id="tkCopy">Copy</button><a id="tkScan" href="#" target="_blank" rel="noopener">Etherscan</a></div>
+  </div>
+  <div class="pane sw" id="swPlay">
+    <h6>GAMEPLAY</h6>
+    <div id="gpBody"></div>
   </div>
   <div class="pane sw" id="swGame">
     <h6>GAME</h6>
@@ -2435,7 +2512,7 @@ function setWallet(a) {
   [$("wBtn"), $("wBtnTop"), $("wBtnHud")].forEach(b => b.classList.toggle("on", !!wallet));
   $("lgAddr").textContent = wallet ? wallet : "Not connected";
   refreshPanels();
-  if (typeof renderSide === "function") { prof.eth = prof.rank = null; renderSide(); loadChain(); }
+  if (typeof renderSide === "function") { prof.eth = prof.rank = prof.txs = null; renderSide(); loadChain(); }
 }
 function connect() {
   if (!window.ethereum) { toast("No wallet found. Install a browser wallet to connect."); if (!playing) alertTitle("No wallet found. Install a browser wallet to connect."); return Promise.resolve(null); }
@@ -2572,41 +2649,97 @@ function drawMini() {
 }
 
 /* ================= side windows ================= */
-const CONFIG = { TOKEN: "" };
+const CONFIG = { TOKEN: "0x3d0be2a4a958ccca6b8af532a5fc0159023d80b1" };
 const scanUrl = () => CONFIG.TOKEN ? "https://etherscan.io/token/" + CONFIG.TOKEN : "https://etherscan.io";
-const prof = { eth: null, rank: null, chain: null, sup: null };
+const prof = { eth: null, rank: null, chain: null, txs: null };
 const CHAINS = { "0x1": "Ethereum", "0x2105": "Base", "0xa4b1": "Arbitrum", "0xa": "Optimism", "0x89": "Polygon", "0x38": "BNB Chain", "0xaa36a7": "Sepolia" };
 function fmtUnits(hex, dec, dp) { try { const v = BigInt(hex); const base = 10n ** BigInt(dec); const whole = v / base, frac = (v % base).toString().padStart(dec, "0").slice(0, dp); return Number(whole).toLocaleString() + (dp ? "." + frac : ""); } catch (e) { return "-"; } }
 function ethCall(data) { return window.ethereum.request({ method: "eth_call", params: [{ to: CONFIG.TOKEN, data }, "latest"] }); }
 function loadChain() {
   if (!window.ethereum) return;
   window.ethereum.request({ method: "eth_chainId" }).then(c => { prof.chain = c; renderSide(); }).catch(() => {});
-  if (CONFIG.TOKEN && !prof.sup) ethCall("0x18160ddd").then(v => { prof.sup = fmtUnits(v, 18, 0); renderSide(); }).catch(() => {});
   if (!wallet) return;
   window.ethereum.request({ method: "eth_getBalance", params: [wallet, "latest"] }).then(v => { prof.eth = fmtUnits(v, 18, 4); renderSide(); }).catch(() => {});
+  window.ethereum.request({ method: "eth_getTransactionCount", params: [wallet, "latest"] }).then(v => { prof.txs = Number(BigInt(v)).toLocaleString(); renderSide(); }).catch(() => {});
   if (CONFIG.TOKEN) ethCall("0x70a08231" + wallet.slice(2).toLowerCase().padStart(64, "0")).then(v => { prof.rank = fmtUnits(v, 18, 2); renderSide(); }).catch(() => {});
 }
 function renderSide() {
   $("tkAddr").textContent = CONFIG.TOKEN ? short(CONFIG.TOKEN) : "Posted at launch";
   $("tkAddr").title = CONFIG.TOKEN;
-  $("tkSup").textContent = prof.sup || "-";
   $("tkScan").href = scanUrl(); $("rankBtn").href = scanUrl();
   const Q = QUESTS[S.q] || QUESTS[QUESTS.length - 1];
   const rows = playing
     ? [["Zone", curZone || zoneAt(player.pos.x, player.pos.z)], ["Quest", Q.t], ["Level", S.lvl], ["Rank", rankOf()], ["Monsters slain", S.kills], ["Aether", S.aether], ["Warden", S.bossDown ? "Defeated" : "Sealed in the Gate"]]
     : [["Genre", "Open world MMORPG"], ["Zones", "6"], ["Monsters", "4 kinds + Rift Warden"], ["Forge", RECIPES.length + " recipes"], ["Ranks", "E to S"], ["Plays in", "Your browser"]];
   $("gmKv").innerHTML = rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("");
-  const forged = S.items.filter(i => !["saber", "coat"].includes(i.k));
-  if (!wallet) {
-    $("pfBody").innerHTML = `<p class="lead">Connect your wallet to load your profile.</p><dl class="kv"><dt>Ranker</dt><dd>${S.name}</dd><dt>Level</dt><dd>${S.lvl}</dd><dt>Rank</dt><dd>${rankOf()}</dd></dl><div class="acts"><button id="pfConnect">Connect wallet</button></div>`;
-    $("pfConnect").onclick = connect;
-  } else {
-    $("pfBody").innerHTML = `<dl class="kv"><dt>Wallet</dt><dd title="${wallet}">${short(wallet)}</dd><dt>Network</dt><dd>${CHAINS[prof.chain] || prof.chain || "-"}</dd><dt>ETH</dt><dd>${prof.eth ?? "..."}</dd><dt>$RANK</dt><dd>${CONFIG.TOKEN ? (prof.rank ?? "...") : "-"}</dd><dt>Ranker</dt><dd>${S.name}</dd><dt>Level / Rank</dt><dd>${S.lvl} / ${rankOf()}</dd><dt>Items forged</dt><dd>${forged.length}</dd><dt>Sealed to wallet</dt><dd>${forged.filter(i => i.sealed && i.sealed.to.toLowerCase() === wallet.toLowerCase()).length}</dd></dl><div class="acts"><a href="https://etherscan.io/address/${wallet}" target="_blank" rel="noopener">View on Etherscan</a></div>`;
-  }
+  const pb = $("pfBody"); const keep = pb.scrollTop;
+  pb.innerHTML = profileHtml();
+  const pc = $("pfConnect"); if (pc) pc.onclick = connect;
+  pb.scrollTop = keep;
 }
+const RCOL = { common: "var(--r-common)", uncommon: "var(--r-uncommon)", rare: "var(--r-rare)", legendary: "var(--r-legendary)" };
+let avCache = { w: null, url: null };
+function avatarOf(addr) {
+  if (avCache.w === addr) return avCache.url;
+  let h = BigInt(addr); const rnd = () => { h = (h * 6364136223846793005n + 1442695040888963407n) & ((1n << 64n) - 1n); return Number(h >> 33n) / 2147483648; };
+  const hue = Math.floor(rnd() * 360), c = document.createElement("canvas"); c.width = c.height = 8; const x = c.getContext("2d");
+  x.fillStyle = `hsl(${(hue + 180) % 360},45%,12%)`; x.fillRect(0, 0, 8, 8);
+  const cols = [`hsl(${hue},85%,62%)`, `hsl(${(hue + 40) % 360},90%,72%)`, `hsl(${hue},60%,36%)`];
+  for (let yy = 0; yy < 8; yy++) for (let xx = 0; xx < 4; xx++) { const v = rnd(); if (v < .55) { x.fillStyle = cols[v < .12 ? 1 : v < .3 ? 2 : 0]; x.fillRect(xx, yy, 1, 1); x.fillRect(7 - xx, yy, 1, 1); } }
+  avCache = { w: addr, url: c.toDataURL() }; return avCache.url;
+}
+const ICON_W = c => `<svg viewBox="0 0 24 24"><path d="M19 3 9 13l2 2L21 5V3zM8 14l-3 3 2 2 3-3M4 18l2 2" fill="none" stroke="${c}" stroke-width="2" stroke-linecap="round"/></svg>`;
+const ICON_A = c => `<svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" fill="none" stroke="${c}" stroke-width="2"/><path d="M12 7v10" stroke="${c}" stroke-width="1.5"/></svg>`;
+function profileHtml() {
+  const rk = rankOf(), ri = RANKS.findIndex(r => r[0] === rk), nx = RANKS[ri + 1];
+  const rpPct = nx ? Math.min(100, (S.rp - RANKS[ri][1]) / (nx[1] - RANKS[ri][1]) * 100) : 100;
+  const xpPct = Math.min(100, S.xp / xpNext() * 100);
+  const hpNow = Math.round(Math.min(S.hp, maxHp())), hpPct = hpNow / maxHp() * 100;
+  const W = W_(), A = A_(), Q = QUESTS[S.q] || QUESTS[QUESTS.length - 1];
+  const forged = S.items.filter(i => !["saber", "coat"].includes(i.k));
+  const sealed = forged.filter(i => i.sealed && wallet && i.sealed.to.toLowerCase() === wallet.toLowerCase()).length;
+  const qp = Q.n ? Math.min(S.qn, Q.n) + " / " + Q.n : "Open";
+  const av = wallet ? `<img src="${avatarOf(wallet)}" alt="">` : `<div class="ph">?</div>`;
+  const chip = wallet ? `<span class="pf-chip"><i></i>${CHAINS[prof.chain] || prof.chain || "Connected"}</span>` : `<span class="pf-chip off"><i></i>Wallet not connected</span>`;
+  let h = `<div class="pf-head"><div class="pf-av">${av}<b>${rk}</b></div><div class="pf-id"><div class="nm">${S.name}</div><div class="sub">${wallet ? `<span title="${wallet}">${short(wallet)}</span>` : "Local save"} / Level ${S.lvl}</div>${chip}</div></div>`;
+  h += `<div class="pf-bar"><div class="l"><span>Level ${S.lvl}</span><b>${Math.floor(S.xp)} / ${xpNext()} XP</b></div><div class="t"><i style="width:${xpPct}%"></i></div></div>`;
+  h += `<div class="pf-bar rp"><div class="l"><span>Rank ${rk}${nx ? " to " + nx[0] : ""}</span><b>${S.rp}${nx ? " / " + nx[1] : ""} RP</b></div><div class="t"><i style="width:${rpPct}%"></i></div></div>`;
+  h += `<div class="pf-bar hp"><div class="l"><span>Health</span><b>${hpNow} / ${maxHp()}</b></div><div class="t"><i style="width:${hpPct}%"></i></div></div>`;
+  h += `<div class="pf-stats"><div><b>${atk()}</b><span>ATK</span></div><div><b>${def()}</b><span>DEF</span></div><div><b>${S.kills}</b><span>SLAIN</span></div><div><b style="color:#ffd27a">${S.aether}</b><span>AETHER</span></div></div>`;
+  h += `<div class="pf-sec">EQUIPPED</div>`;
+  h += `<div class="pf-eq" style="--rc:${RCOL[W.r]}">${ICON_W(RCOL[W.r])}<div><div class="n">${W.n}</div><div class="s">Attack +${W.atk}</div></div><u>${S.eqW}</u></div>`;
+  h += `<div class="pf-eq" style="--rc:${RCOL[A.r]}">${ICON_A(RCOL[A.r])}<div><div class="n">${A.n}</div><div class="s">${A.hp ? "Health +" + A.hp + ", Defense +" + A.def : "No bonus"}</div></div><u>${S.eqA}</u></div>`;
+  h += `<div class="pf-sec">MATERIALS <em>${S.tonic} tonics</em></div><div class="pf-mats">${Object.entries(MATS).map(([k, m]) => `<div style="--mc:${m.c}" title="${m.n}"><i></i><b>${S.mats[k]}</b><span>${m.n}</span></div>`).join("")}</div>`;
+  h += `<div class="pf-sec">VAULT <em>${S.items.length} items, ${forged.length} forged${wallet ? ", " + sealed + " sealed" : ""}</em></div><div class="pf-vault">${S.items.map(i => { const g = GEAR[i.k]; return `<i class="${i.sealed ? "sl" : ""}" style="--rc:${RCOL[g.r]}" title="${i.id} ${g.n}"></i>`; }).join("")}</div>`;
+  h += `<div class="pf-sec">QUEST <em>${qp}</em></div><div class="pf-quest">${Q.t}<span>${S.bossDown ? "Rift Warden defeated" : "Rift Warden sealed in the Gate"}</span></div>`;
+  if (wallet) {
+    h += `<div class="pf-sec">WALLET</div><dl class="kv" style="margin-top:0"><dt>ETH</dt><dd>${prof.eth ?? "..."}</dd><dt>$RANK</dt><dd>${CONFIG.TOKEN ? (prof.rank ?? "...") : "-"}</dd><dt>Transactions</dt><dd>${prof.txs ?? "..."}</dd></dl>`;
+    h += `<div class="acts"><a href="https://etherscan.io/address/${wallet}" target="_blank" rel="noopener">View on Etherscan</a></div>`;
+  } else h += `<div class="acts"><button id="pfConnect">Connect wallet</button></div>`;
+  return h;
+}
+function gameplayHtml() {
+  const MCOL = { slime: "#7fe8ff", wolf: "#c7a2ff", golem: "#ff7fb0", boss: "#ff5c8a" };
+  const DROPS = { slime: "Gel Core, Aether, Tonic", wolf: "Thorn Pelt, Thornwolf Fang, Aether", golem: "Shard Heart, Aether", boss: "Rift Ember x2, Shard Heart x3, 500 Aether" };
+  const HOME = { slime: "Gloam Glade", wolf: "Thornwood", golem: "Shardspine Heights", boss: "The Gate" };
+  const SK = [["1", "Whirlwind", "Spin hit on everything around you, 2.2x attack"], ["2", "Rift Dash", "Lunge through the nearest target"], ["3", "Starfall", "Seven star strikes, 1.6x attack each"]];
+  const RC = ["var(--r-common)", "var(--r-common)", "var(--r-uncommon)", "var(--r-rare)", "var(--r-rare)", "var(--r-legendary)"];
+  const need = r => Object.entries(r.need).map(([k, v]) => v + " " + (k === "aether" ? "Aether" : MATS[k].n)).join(", ");
+  let h = `<p class="lead">A real-time action RPG in your browser. Every kill drops loot, every drop can become gear, every piece can be sealed to your wallet.</p>`;
+  h += `<div class="gp-loop"><div><b>Hunt</b><span>4 monsters</span></div><div><b>Loot</b><span>5 materials</span></div><div><b>Forge</b><span>${RECIPES.length} recipes</span></div><div><b>Rank</b><span>E to S</span></div></div>`;
+  h += `<div class="pf-sec">BESTIARY</div>`;
+  h += Object.entries(KINDS).map(([k, K]) => `<div class="gp-mon" style="--mc:${MCOL[k]}"><i></i><b>${K.n}</b><em>Lv ${K.lvl}, ${K.hp.toLocaleString()} HP</em><span>${HOME[k]}. Drops ${DROPS[k]}. ${K.rp} RP</span></div>`).join("");
+  h += `<div class="pf-sec">SKILLS <em>Click to attack, Q tonic</em></div><div class="gp-sk">${SK.map(([k, n, d], i) => `<div><kbd>${k}</kbd><b>${n}</b><span>${d}. ${COST[i]} MP, ${CDMAX[i]}s</span></div>`).join("")}</div>`;
+  h += `<div class="pf-sec">FORGE <em>${RECIPES.length} recipes</em></div>`;
+  h += RECIPES.filter(r => GEAR[r.id]).map(r => { const g = GEAR[r.id]; return `<div class="gp-forge"><b class="${g.r}">${g.n}</b><span>${need(r)}</span></div>`; }).join("");
+  h += `<div class="pf-sec">RANK LADDER <em>RP from kills</em></div><div class="gp-ranks">${RANKS.map(([l, p], i) => `<div style="--rc:${RC[i]}"><b>${l}</b><span>${p} RP</span></div>`).join("")}</div>`;
+  h += `<div class="pf-sec">WORLD</div><div class="gp-zones">${["Gatefall Plateau", "Wayfarer Fields", "Gloam Glade", "Thornwood", "Shardspine Heights", "Mirror Lake"].map(z => `<span>${z}</span>`).join("")}</div>`;
+  return h;
+}
+$("gpBody").innerHTML = gameplayHtml();
 $("tkCopy").onclick = () => { if (!CONFIG.TOKEN) { toast("Contract address is posted at launch"); alertTitle("Contract address is posted at launch"); return; } navigator.clipboard.writeText(CONFIG.TOKEN).then(() => { toast("Contract copied"); if (!playing) alertTitle("Contract copied"); }); };
-$("pfRefresh").onclick = () => { prof.eth = prof.rank = null; loadChain(); renderSide(); };
-if (window.ethereum && window.ethereum.on) window.ethereum.on("chainChanged", c => { prof.chain = c; prof.eth = prof.rank = null; loadChain(); });
+$("pfRefresh").onclick = () => { prof.eth = prof.rank = prof.txs = null; loadChain(); renderSide(); };
+if (window.ethereum && window.ethereum.on) window.ethereum.on("chainChanged", c => { prof.chain = c; prof.eth = prof.rank = prof.txs = null; loadChain(); });
 setInterval(() => renderSide(), 1500);
 renderSide(); loadChain();
 
